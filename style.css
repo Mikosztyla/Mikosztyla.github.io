@@ -85,7 +85,7 @@ main h1 {
     display: grid;
 }
 
-.container button{
+.container a{
     height: 10%;
     width: 40%;
     grid-row: 1;
@@ -95,6 +95,16 @@ main h1 {
     left: 30%;
     border-radius: 20px;
     opacity: 0;
+    z-index: 1;
+    transition: ease-in-out 0.4s;
+    outline: none;
+    border: none;
+}
+
+.container button {
+    height: 100%;
+    width: 100%;
+    border-radius: 20px;
     z-index: 1;
     transition: ease-in-out 0.4s;
     outline: none;
@@ -127,9 +137,10 @@ main h1 {
     scale: 1.05;
 }
 
-.container:hover > button{
+.container:hover > a{
     opacity: 1;
 }
+
 
 
 @media screen and (max-width: 600px) {
