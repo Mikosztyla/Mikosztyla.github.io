@@ -95,3 +95,27 @@
 strong {
     font-weight: bolder;
 }
+
+@media screen and (max-width: 800px){
+    .course_section {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .course img {
+        display: none;
+    }
+    
+    .course {
+        height: auto;
+    }
+
+    .course_content {
+        width: 100%;
+    }
+
+    main {
+        margin-top: 30px;
+    }
+}

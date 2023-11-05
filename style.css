@@ -130,3 +130,14 @@ main h1 {
 .container:hover > button{
     opacity: 1;
 }
+
+
+@media screen and (max-width: 600px) {
+    .drone_section {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    .drone_container {
+        min-height: 300px;
+    }
+}
