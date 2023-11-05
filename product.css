@@ -6,7 +6,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 20px; /* Odstęp od tekstu do przycisku */
+    margin-top: 20px;
 }
 
 .buy-now-button {
