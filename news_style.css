@@ -42,6 +42,14 @@ main {
     margin-right: 2%;
 }
 
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+
 p {
   text-align: center;
   color: #fefefe;
@@ -90,7 +98,28 @@ p {
 }
 
 .message_input {
-  height: 200px;
+  height: 150px;
+}
+
+#the-count {
+  padding: 0.1rem 0 0 0;
+  font-size: 0.875rem;
+  color: #d4d4d4;
+}
+
+.contact_content button {
+  margin-top: 0.1rem;
+  background-color: #0073e6;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.contact_content button:hover {
+  background-color: #005bb6;
 }
 
 @media screen and (max-width: 900px){

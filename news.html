@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mikro projekt</title>
     <link rel="stylesheet" href="news_style.css">
+
 </head>
 <body>
     <nav>
@@ -19,16 +20,24 @@
         <div class="contact_content">
             <p>Zapraszamy do naszego biura! Przyjdź i zapytaj nas o co tylko chcesz, jesteśmy otwarci <strong>24/7h!!!</strong></p>
             <p>Jesteś zbyt leniwy, żeby spotkać się z nami osobiście? Napisz do nas wiadomość!</p>
-            
-            <div class="input-group">
-                <input class="input" required autocomplete="off" type="text" name="email" id="email">
-                <label class="label" for="email">Email</label>
-            </div>
-            <div class="input-group">
-                <textarea class="input message_input" required autocomplete="off" name="message" id="message"></textarea>
-                <label class="label" for="message">Twoje pytanie</label>
-            </div>
+            <form onsubmit="return validate()">
+                <div class="input-group">
+                    <input class="input" required autocomplete="off" type="text" name="email" id="email" required>
+                    <label class="label" for="email">Email</label>
+                </div>
+                <div class="input-group">
+                    <textarea class="input message_input" required autocomplete="off" name="message" id="message" maxlength="100" required></textarea>
+                    <label class="label" for="message">Twoje pytanie</label>
+                </div>
+
+                <div id="the-count">
+                    <span id="current">0</span>
+                    <span id="maximum">/ 100</span>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
         </div>
     </main>
+    <script src="script.js"></script>
 </body>
 </html>
