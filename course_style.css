@@ -78,12 +78,18 @@
     min-width: 100px;
     border: none;
     border-radius: 10px;
-    background-color: bisque;
+    background-color: rgb(214, 188, 159);
     margin-bottom: 2%;
+    transition: ease-in-out 0.2s;
 }
 
 .course_content button:hover {
     background-color: rgb(134, 111, 87);
+    scale: 1.05;
+}
+
+.course_content button:active {
+    scale: 0.9;
 }
 
 .course_content h1 {
