@@ -10,10 +10,10 @@ function countCharacters(){
 let email = document.getElementById("email");
 
 function validate(){
-    let emailRegex = /^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+$/;
+    let emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
     let emailValidation = emailRegex.test(email.value);
     if (!emailValidation) {
-        alert("Zły mail");
+        alert("Niepoprawny email");
         return false;
     }
     return true;
