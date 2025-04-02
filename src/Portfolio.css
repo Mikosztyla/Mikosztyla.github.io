@@ -1,0 +1,109 @@
+.portfolio-container {
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+.nav-bar {
+    position: fixed;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+}
+
+.nav-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    gap: 16px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: #3498db;
+}
+
+.hero-header {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+
+.hero-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.hero-description {
+    margin-top: 16px;
+    font-size: 1.125rem;
+    color: #666;
+}
+
+.section-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 16px;
+}
+
+.about-section, .projects-section, .contact-section {
+    padding: 32px;
+    text-align: center;
+}
+
+.about-description, .contact-description {
+    font-size: 1.125rem;
+    color: #666;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding: 0 16px;
+}
+
+@media (min-width: 768px) {
+    .projects-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (min-width: 1024px) {
+    .projects-grid {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+.project-card {
+    background-color: #fff;
+    padding: 16px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.project-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.project-description {
+    font-size: 1rem;
+    color: #666;
+}
