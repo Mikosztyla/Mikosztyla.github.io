@@ -1,9 +1,11 @@
 import React from 'react';
 import './Portfolio.css';
+import Roadmap from './RoadMap';
 
 const Portfolio = ({ openProjectDetail }) => {
     return (
         <div className="portfolio-container">
+            <Roadmap />
             <nav className="nav-bar">
                 <h1 className="nav-title">My Portfolio</h1>
                 <ul className="nav-links">

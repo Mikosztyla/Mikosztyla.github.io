@@ -107,3 +107,78 @@
     font-size: 1rem;
     color: #666;
 }
+
+.roadmap-section {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.roadmap-container {
+    position: relative;
+    width: 60%;
+    margin: 0 auto;
+}
+
+.roadmap-line {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 4px;
+    height: 100%;
+    background: #007bff;
+    transform: translateX(-50%);
+}
+
+.roadmap-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.roadmap-item.left {
+    flex-direction: row-reverse;
+    text-align: left;
+}
+
+.roadmap-item.right {
+    text-align: right;
+}
+
+.roadmap-dot {
+    width: 20px;
+    height: 20px;
+    background: #007bff;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 3px solid white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.roadmap-content {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    width: 45%;
+}
+
+.job-title {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.job-company {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 3px;
+}
+
+.job-date {
+    font-size: 1rem;
+    color: #777;
+}
+
