@@ -46,6 +46,14 @@ const Portfolio = ({ openProjectDetail }) => {
                         <h3 className="project-title">Rubik's cube solver</h3>
                         <p className="project-description">3D Rubik's cube simulation with solver (LBL method)</p>
                     </div>
+                    <div className="project-card" onClick={() => openProjectDetail('gears')}>
+                        <h3 className="project-title">"Trybiki""</h3>
+                        <p className="project-description">2D platformer game vampire-survivor like</p>
+                    </div>
+                    <div className="project-card" onClick={() => openProjectDetail('lemurs')}>
+                        <h3 className="project-title">Lemuringo</h3>
+                        <p className="project-description">A 2D top-down educational, writing game developed during HackYeah 2024</p>
+                    </div>
                 </div>
             </section>
 
