@@ -57,7 +57,7 @@ const ProjectDetail = ({ projectId, closeProjectDetail }) => {
             description: 'A time tracking app for personal productivity.',
             images: ['/images/czasoport-1.jpg', '/images/czasoport-2.jpg'],
             github: 'https://github.com/Mikosztyla/Lemuringo',
-            youtube: null,
+            youtube: 'https://youtu.be/KHQsq9ipwfg',
             itch: null,
         },
     };
