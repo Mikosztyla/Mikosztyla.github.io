@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { FaGithub, FaYoutube, FaItchIo } from 'react-icons/fa';
 import './ProjectDetail.css';
 
