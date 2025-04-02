@@ -107,11 +107,27 @@ body::-webkit-scrollbar {
 }
 
 .project-card {
-    background-color: #fff;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     padding: 16px;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
 }
+
+.project-card:hover {
+    transform: scale(1.05);
+}
+
 
 .project-title {
     font-size: 1.25rem;
