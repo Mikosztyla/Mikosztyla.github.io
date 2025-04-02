@@ -6,9 +6,9 @@ const Portfolio = ({ openProjectDetail }) => {
     return (
         <div className="portfolio-container">
             <nav className="nav-bar">
-                <h1 className="nav-title">My Portfolio</h1>
+                <h1 className="nav-title">Mikołaj Gosztyła - portfolio</h1>
                 <ul className="nav-links">
-                    <li><a href="#about" className="nav-link">About</a></li>
+                    <li><a href="#roadmap" className="nav-link">Career Roadmap</a></li>
                     <li><a href="#projects" className="nav-link">Projects</a></li>
                     <li><a href="#contact" className="nav-link">Contact</a></li>
                 </ul>

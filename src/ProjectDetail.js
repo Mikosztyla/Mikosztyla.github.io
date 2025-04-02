@@ -7,7 +7,7 @@ const ProjectDetail = ({ projectId, closeProjectDetail }) => {
         czasoport: {
             title: 'Czasoport',
             description: 'This project is the result of my first big and finished group project in AGH Code Industry. Working with over 20 people, first as a developer then also as a Scrum Master I\'ve led this project to the finish. It\'s a 2D future, fantasy, adventure and puzzle game made with C# and Unity, where you have to save the humanity from distinction.\n\nImmerse yourself in this world and crack all the puzzles!',
-            images: ['/images/czasoport-1.jpg', '/images/czasoport-2.jpg'],
+            images: [],
             github: 'https://github.com/Mikosztyla/czasoport',
             youtube: 'https://youtu.be/YTEHO9jmnjw',
             itch: 'https://bulba1265.itch.io/czasoport',
@@ -15,7 +15,7 @@ const ProjectDetail = ({ projectId, closeProjectDetail }) => {
         castle: {
             title: 'Project "Castle"',
             description: 'I\'m still working on this project, and ',
-            images: ['/images/project2-1.jpg'],
+            images: [],
             github: null,
             youtube: null,
             itch: null,
@@ -23,7 +23,7 @@ const ProjectDetail = ({ projectId, closeProjectDetail }) => {
         thiefGame: {
             title: 'Thief game',
             description: 'A description for project 3.',
-            images: ['/images/project3-1.jpg', '/images/project3-2.jpg'],
+            images: [],
             github: 'https://github.com/your-username/project3',
             youtube: null,
             itch: null,
@@ -31,7 +31,7 @@ const ProjectDetail = ({ projectId, closeProjectDetail }) => {
         bridgeAnim: {
             title: 'Brige animation',
             description: 'A time tracking app for personal productivity.',
-            images: ['/images/czasoport-1.jpg', '/images/czasoport-2.jpg'],
+            images: [],
             github: null,
             youtube: 'https://youtu.be/rxFoa_v7JbY',
             itch: null,
@@ -39,7 +39,7 @@ const ProjectDetail = ({ projectId, closeProjectDetail }) => {
         cubeSolver: {
             title: 'Rubik\'s cube solver',
             description: 'A time tracking app for personal productivity.',
-            images: ['/images/czasoport-1.jpg', '/images/czasoport-2.jpg'],
+            images: [],
             github: 'https://github.com/Mikosztyla/CubeSolver',
             youtube: null,
             itch: null,
@@ -47,7 +47,7 @@ const ProjectDetail = ({ projectId, closeProjectDetail }) => {
         gears: {
             title: '"Trybiki"',
             description: 'A time tracking app for personal productivity.',
-            images: ['/images/czasoport-1.jpg', '/images/czasoport-2.jpg'],
+            images: [],
             github: null,
             youtube: null,
             itch: null,
@@ -55,7 +55,7 @@ const ProjectDetail = ({ projectId, closeProjectDetail }) => {
         lemurs: {
             title: 'Lemuringo',
             description: 'A time tracking app for personal productivity.',
-            images: ['/images/czasoport-1.jpg', '/images/czasoport-2.jpg'],
+            images: [],
             github: 'https://github.com/Mikosztyla/Lemuringo',
             youtube: 'https://youtu.be/_RzD-e05kFg',
             itch: null,
