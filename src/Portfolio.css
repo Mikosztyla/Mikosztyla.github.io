@@ -146,7 +146,7 @@ body::-webkit-scrollbar {
 
 .roadmap-container {
     position: relative;
-    width: 30%;
+    width: 45%;
     margin: 0 auto;
 }
 
@@ -164,7 +164,7 @@ body::-webkit-scrollbar {
     position: relative;
     display: flex;
     align-items: center;
-    margin-bottom: -10px;
+    margin-bottom: -15px;
 }
 
 .roadmap-item.left {
@@ -197,19 +197,19 @@ body::-webkit-scrollbar {
 }
 
 .job-title {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     color: #333;
     margin-bottom: 5px;
 }
 
 .job-company {
-    font-size: 1rem;
+    font-size: 1.1rem;
     color: #555;
     margin-bottom: 3px;
 }
 
 .job-date {
-    font-size: 0.7rem;
+    font-size: 0.9rem;
     color: #777;
 }
 

@@ -37,7 +37,7 @@ const Portfolio = ({ openProjectDetail }) => {
                         <h3 className="project-title">Castle</h3>
                         <p className="project-description">Mobile app for kids to encourage active sightseeing</p>
                     </div>
-                    <div className="project-card" onClick={() => openProjectDetail('thiefGame')}>
+                    <div className="project-card" onClick={() => openProjectDetail('thiefGame')} style={{ backgroundImage: `url(/images/TheftGame.png)` }}>
                         <h3 className="project-title">Thief Game</h3>
                         <p className="project-description">Will you manage to steal MonaLisa?</p>
                     </div>
@@ -45,7 +45,7 @@ const Portfolio = ({ openProjectDetail }) => {
                         <h3 className="project-title">Bridge animation</h3>
                         <p className="project-description">Animation of walking bridge</p>
                     </div>
-                    <div className="project-card" onClick={() => openProjectDetail('cubeSolver')}>
+                    <div className="project-card" onClick={() => openProjectDetail('cubeSolver')} style={{ backgroundImage: `url(/images/CubeSolver.png)` }}>
                         <h3 className="project-title">Rubik's cube solver</h3>
                         <p className="project-description">3D Rubik's cube simulation with solver (LBL method)</p>
                     </div>
