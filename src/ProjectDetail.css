@@ -61,14 +61,16 @@
 }
 
 /* Title and description styling */
-.project-title {
+.modal-container .project-title {
     font-size: 2rem;
     margin-bottom: 15px;
+    color: #333;
 }
 
-.project-description {
+.modal-container .project-description {
     font-size: 1.2rem;
     margin-bottom: 20px;
+    color: 
 }
 
 /* Image styling */
