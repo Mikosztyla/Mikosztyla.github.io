@@ -8,7 +8,7 @@ const ProjectDetail = ({ projectId, closeProjectDetail }) => {
             title: 'Czasoport',
             description: 'This project is the result of my first big and finished group project in AGH Code Industry. Working with over 20 people, first as a developer then also as a Scrum Master I\'ve led this project to the finish. It\'s a 2D future, fantasy, adventure and puzzle game made with C# and Unity, where you have to save the humanity from distinction.\n\nImmerse yourself in this world and crack all the puzzles!',
             images: ['/images/czasoport-1.jpg', '/images/czasoport-2.jpg'],
-            github: 'https://github.com/AGH-Code-Industry/czasoport',
+            github: 'https://github.com/Mikosztyla/czasoport',
             youtube: 'https://youtu.be/YTEHO9jmnjw',
             itch: 'https://bulba1265.itch.io/czasoport',
         },
@@ -63,6 +63,13 @@ const ProjectDetail = ({ projectId, closeProjectDetail }) => {
     };
 
     const project = projectData[projectId];
+
+    useEffect(() => {
+        document.body.style.overflow = "hidden";
+        return () => {
+            document.body.style.overflow = "auto";
+        };
+    }, []);
 
     if (!project) {
         return <div>Project not found!</div>;
