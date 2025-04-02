@@ -97,7 +97,7 @@ const ProjectDetail = ({ projectId, closeProjectDetail }) => {
                     )}
                 </div>
                 <h2 className="project-title">{project.title}</h2>
-                <p className="project-description">{project.description}</p>
+                <p className="project-description" style={{ opacity: 1 }}>{project.description}</p>
                 <div className="project-images">
                     {project.images.map((img, index) => (
                         <img key={index} src={img} alt={`${project.title} ${index + 1}`} className="project-image" />
