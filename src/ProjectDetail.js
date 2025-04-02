@@ -37,31 +37,33 @@ const ProjectDetail = ({ projectId, closeProjectDetail }) => {
     }
 
     return (
-        <div className="project-detail-container">
-            <button onClick={closeProjectDetail} className="close-button">Close</button>
-            <div className="project-links">
-                {project.github && (
-                    <a href={project.github} target="_blank" rel="noopener noreferrer" className="project-link">
-                        <FaGithub size={30} />
-                    </a>
-                )}
-                {project.youtube && (
-                    <a href={project.youtube} target="_blank" rel="noopener noreferrer" className="project-link">
-                        <FaYoutube size={30} />
-                    </a>
-                )}
-                {project.itch && (
-                    <a href={project.itch} target="_blank" rel="noopener noreferrer" className="project-link">
-                        <FaItchIo size={30} />
-                    </a>
-                )}
-            </div>
-            <h2 className="project-title">{project.title}</h2>
-            <p className="project-description">{project.description}</p>
-            <div className="project-images">
-                {project.images.map((img, index) => (
-                    <img key={index} src={img} alt={`${project.title} ${index + 1}`} className="project-image" />
-                ))}
+        <div className="modal-overlay">
+            <div className="modal-container">
+                <button onClick={closeProjectDetail} className="close-button">Close</button>
+                <div className="project-links">
+                    {project.github && (
+                        <a href={project.github} target="_blank" rel="noopener noreferrer" className="project-link">
+                            <FaGithub size={30} />
+                        </a>
+                    )}
+                    {project.youtube && (
+                        <a href={project.youtube} target="_blank" rel="noopener noreferrer" className="project-link">
+                            <FaYoutube size={30} />
+                        </a>
+                    )}
+                    {project.itch && (
+                        <a href={project.itch} target="_blank" rel="noopener noreferrer" className="project-link">
+                            <FaItchIo size={30} />
+                        </a>
+                    )}
+                </div>
+                <h2 className="project-title">{project.title}</h2>
+                <p className="project-description">{project.description}</p>
+                <div className="project-images">
+                    {project.images.map((img, index) => (
+                        <img key={index} src={img} alt={`${project.title} ${index + 1}`} className="project-image" />
+                    ))}
+                </div>
             </div>
         </div>
     );
