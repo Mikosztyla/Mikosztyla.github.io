@@ -29,7 +29,7 @@ const Portfolio = ({ openProjectDetail }) => {
             <section id="projects" className="projects-section">
                 <h2 className="section-title">My Projects</h2>
                 <div className="projects-grid">
-                    <div className="project-card" onClick={() => openProjectDetail('czasoport')}>
+                    <div className="project-card" onClick={() => openProjectDetail('czasoport')} style={{ backgroundImage: `url(/images/czasoport.png)` }}>
                         <h3 className="project-title">Czasoport</h3>
                         <p className="project-description">2D Future Fantasy Adventure and Puzzle game</p>
                     </div>
