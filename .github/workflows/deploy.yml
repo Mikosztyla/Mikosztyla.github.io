@@ -21,7 +21,7 @@ jobs:
         run: npm install
 
       - name: Build Tailwind CSS
-        run: npx tailwindcss -i ./src/index.css -o ./src/output.css --minify
+        run: npx tailwindcss -i src/index.css -o src/output.css --minify
 
       - name: Build the React app
         run: npm run build
