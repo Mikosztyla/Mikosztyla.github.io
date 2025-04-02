@@ -77,7 +77,11 @@
     font-size: 1.2rem;
     margin-bottom: 20px;
     color: #333;
-    align-self: left;
+    text-align: left;
+    width: 100%;
+    margin: 0 auto;
+    line-height: 1.5;
+    white-space: pre-line;
 }
 
 /* Image styling */
