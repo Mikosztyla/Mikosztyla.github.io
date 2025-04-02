@@ -51,7 +51,7 @@ body::-webkit-scrollbar {
 }
 
 .hero-header {
-    height: 100vh;
+    height: 20vh;
     display: flex;
     flex-direction: column;
     justify-content: center;

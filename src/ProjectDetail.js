@@ -11,6 +11,7 @@ const ProjectDetail = ({ projectId, closeProjectDetail }) => {
             github: 'https://github.com/Mikosztyla/czasoport',
             youtube: 'https://youtu.be/YTEHO9jmnjw',
             itch: 'https://bulba1265.itch.io/czasoport',
+            responsibilities: 'In this project i did:\n- all the UI animations (time changing animation, item picking, etc)\n- player movement (with blend tree in Unity)\n- implementation of more then 50% of all the puzzles in the game'
         },
         castle: {
             title: 'Project "Castle"',
@@ -19,6 +20,7 @@ const ProjectDetail = ({ projectId, closeProjectDetail }) => {
             github: null,
             youtube: null,
             itch: null,
+            responsibilities: ''
         },
         thiefGame: {
             title: 'Thief game',
@@ -27,6 +29,7 @@ const ProjectDetail = ({ projectId, closeProjectDetail }) => {
             github: 'https://github.com/your-username/project3',
             youtube: null,
             itch: null,
+            responsibilities: ''
         },
         bridgeAnim: {
             title: 'Brige animation',
@@ -35,6 +38,7 @@ const ProjectDetail = ({ projectId, closeProjectDetail }) => {
             github: null,
             youtube: 'https://youtu.be/rxFoa_v7JbY',
             itch: null,
+            responsibilities: ''
         },
         cubeSolver: {
             title: 'Rubik\'s cube solver',
@@ -43,6 +47,7 @@ const ProjectDetail = ({ projectId, closeProjectDetail }) => {
             github: 'https://github.com/Mikosztyla/CubeSolver',
             youtube: null,
             itch: null,
+            responsibilities: ''
         },
         gears: {
             title: '"Trybiki"',
@@ -51,6 +56,7 @@ const ProjectDetail = ({ projectId, closeProjectDetail }) => {
             github: null,
             youtube: null,
             itch: null,
+            responsibilities: ''
         },
         lemurs: {
             title: 'Lemuringo',
@@ -59,6 +65,7 @@ const ProjectDetail = ({ projectId, closeProjectDetail }) => {
             github: 'https://github.com/Mikosztyla/Lemuringo',
             youtube: 'https://youtu.be/_RzD-e05kFg',
             itch: null,
+            responsibilities: ''
         },
     };
 
@@ -98,6 +105,7 @@ const ProjectDetail = ({ projectId, closeProjectDetail }) => {
                 </div>
                 <h2 className="project-title">{project.title}</h2>
                 <p className="project-description">{project.description}</p>
+                <p className="project-responsibilities">{project.responsibilities}</p>
                 <div className="project-images">
                     {project.images.map((img, index) => (
                         <img key={index} src={img} alt={`${project.title} ${index + 1}`} className="project-image" />
