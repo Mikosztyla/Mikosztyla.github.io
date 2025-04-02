@@ -1,8 +1,7 @@
-import React from "react";
+import React from 'react';
 import './Portfolio.css';
-import {Link} from "react-router-dom";
 
-const Portfolio = () => {
+const Portfolio = ({ openProjectDetail }) => {
     return (
         <div className="portfolio-container">
             <nav className="nav-bar">
@@ -15,7 +14,7 @@ const Portfolio = () => {
             </nav>
 
             <header className="hero-header">
-                    Welcome to My Portfolio
+                Welcome to My Portfolio
                 <p className="hero-description">I create beautiful and functional web applications.</p>
             </header>
 
@@ -27,35 +26,19 @@ const Portfolio = () => {
             <section id="projects" className="projects-section">
                 <h2 className="section-title">My Projects</h2>
                 <div className="projects-grid">
-                    <div className="project-card">
-                        <h3 className="project-title">
-                            <Link to="/project/czasoport">Czasoport</Link>
-                        </h3>
+                    <div className="project-card" onClick={() => openProjectDetail('czasoport')}>
+                        <h3 className="project-title">Czasoport</h3>
                         <p className="project-description">2D Future Fantasy Adventure and Puzzle game</p>
                     </div>
-                    <div className="project-card">
-                        <h3 className="project-title">
-                            <Link to="/project/castle">Castle</Link>
-                        </h3>
+                    <div className="project-card" onClick={() => openProjectDetail('project2')}>
+                        <h3 className="project-title">Castle</h3>
                         <p className="project-description">Mobile app for kids to encourage active sightseeing</p>
                     </div>
-                    <div className="project-card">
-                        <h3 className="project-title">
-                            <Link to="/project/thief-game">Thief Game</Link>
-                        </h3>
+                    <div className="project-card" onClick={() => openProjectDetail('project3')}>
+                        <h3 className="project-title">Thief Game</h3>
                         <p className="project-description">Will you manage to steal MonaLisa?</p>
                     </div>
-                    <div className="project-card">
-                        <h3 className="project-title">
-                            <Link to="/project/bridge-anim">Bridge animation</Link>
-                        </h3>
-                        <p className="project-description">Bridge animation...</p>
-                    </div>
-                    <div className="project-card">
-                        <h3 className="project-title">
-                            <Link to="/project/rubik-cube">Rubik's cube solver</Link></h3>
-                        <p className="project-description">Rubik's cube simulator with solver using LBL method</p>
-                    </div>
+                    {/* Add more project cards as needed */}
                 </div>
             </section>
 
