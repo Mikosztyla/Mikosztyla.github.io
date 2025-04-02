@@ -6,22 +6,37 @@ const Roadmap = () => {
         {
             title: "Software Engineer I",
             company: "Sabre",
-            date: "2023 - Present",
+            date: "2024.10 - Present",
         },
         {
             title: "Intern",
             company: "Sabre",
-            date: "2021 - 2023",
+            date: "2024.07 - 2024.09",
         },
         {
-            title: "Game developer",
+            title: "Board Member",
             company: "AGH Code Industry",
-            date: "2019 - 2021",
+            date: "2024.05 - Present",
+        },
+        {
+            title: "Game Developer",
+            company: "AGH Code Industry",
+            date: "2023.04 - Present",
+        },
+        {
+            title: "Unity Developer",
+            company: "Geotronics Dystrybucja Sp. z o.o.",
+            date: "2023.10 - 2024.01",
+        },
+        {
+            title: "Information Technology Tutor",
+            company: "Kodland",
+            date: "2023.05 - 2023.09",
         },
         {
             title: "Camp Counselor and Lifeguard",
-            company: "NorthWoods Camp",
-            date: "2018 - 2019",
+            company: "YMCA NorthWoods Camp",
+            date: "2022.05 - 2022.08",
         },
     ];
 
