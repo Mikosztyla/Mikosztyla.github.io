@@ -18,7 +18,10 @@ jobs:
           node-version: 16
 
       - name: Install dependencies
-        run: npm install
+        run: |
+          npm install react-router-dom
+          npm install react-dom
+          npm install
 
       - name: Build the React app
         run: npm run build
