@@ -1,5 +1,6 @@
 import React from "react";
 import './Portfolio.css';
+import {Link} from "react-router-dom";
 
 const Portfolio = () => {
     return (
@@ -24,19 +25,36 @@ const Portfolio = () => {
             </section>
 
             <section id="projects" className="projects-section">
-                <h2 className="section-title">Projects</h2>
+                <h2 className="section-title">My Projects</h2>
                 <div className="projects-grid">
                     <div className="project-card">
-                        <h3 className="project-title">Project 1</h3>
-                        <p className="project-description">Description of the project.</p>
+                        <h3 className="project-title">
+                            <Link to="/project/czasoport">Czasoport</Link>
+                        </h3>
+                        <p className="project-description">2D Future Fantasy Adventure and Puzzle game</p>
                     </div>
                     <div className="project-card">
-                        <h3 className="project-title">Project 2</h3>
-                        <p className="project-description">Description of the project.</p>
+                        <h3 className="project-title">
+                            <Link to="/project/castle">Castle</Link>
+                        </h3>
+                        <p className="project-description">Mobile app for kids to encourage active sightseeing</p>
                     </div>
                     <div className="project-card">
-                        <h3 className="project-title">Project 3</h3>
-                        <p className="project-description">Description of the project.</p>
+                        <h3 className="project-title">
+                            <Link to="/project/thief-game">Thief Game</Link>
+                        </h3>
+                        <p className="project-description">Will you manage to steal MonaLisa?</p>
+                    </div>
+                    <div className="project-card">
+                        <h3 className="project-title">
+                            <Link to="/project/bridge-anim">Bridge animation</Link>
+                        </h3>
+                        <p className="project-description">Bridge animation...</p>
+                    </div>
+                    <div className="project-card">
+                        <h3 className="project-title">
+                            <Link to="/project/rubik-cube">Rubik's cube solver</Link></h3>
+                        <p className="project-description">Rubik's cube simulator with solver using LBL method</p>
                     </div>
                 </div>
             </section>
