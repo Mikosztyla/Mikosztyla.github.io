@@ -78,7 +78,7 @@ const ProjectDetail = ({ projectId, closeProjectDetail }) => {
     return (
         <div className="modal-overlay">
             <div className="modal-container">
-                <button onClick={closeProjectDetail} className="close-button">Close</button>
+                <button onClick={closeProjectDetail} className="close-button">X</button>
                 <div className="project-links">
                     {project.github && (
                         <a href={project.github} target="_blank" rel="noopener noreferrer" className="project-link">

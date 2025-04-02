@@ -5,7 +5,6 @@ import Roadmap from './RoadMap';
 const Portfolio = ({ openProjectDetail }) => {
     return (
         <div className="portfolio-container">
-            <Roadmap />
             <nav className="nav-bar">
                 <h1 className="nav-title">My Portfolio</h1>
                 <ul className="nav-links">
@@ -24,6 +23,8 @@ const Portfolio = ({ openProjectDetail }) => {
                 <h2 className="section-title">About Me</h2>
                 <p className="about-description">Hello</p>
             </section>
+
+            <Roadmap />
 
             <section id="projects" className="projects-section">
                 <h2 className="section-title">My Projects</h2>
