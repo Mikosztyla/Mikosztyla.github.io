@@ -1,7 +1,7 @@
 import React from "react";
 import "./Portfolio.css";
 
-const JobRoadmap = () => {
+const Roadmap = () => {
     const jobs = [
         {
             title: "Software Engineer I",
