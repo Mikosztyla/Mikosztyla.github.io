@@ -20,7 +20,7 @@ const ProjectDetail = ({ projectId, closeProjectDetail }) => {
             github: null,
             youtube: null,
             itch: null,
-            responsibilities: ''
+            responsibilities: 'In this project i did:\n- all the UI main screen animations\n- 3d procedural terrain generation'
         },
         thiefGame: {
             title: 'Thief game',
@@ -29,7 +29,7 @@ const ProjectDetail = ({ projectId, closeProjectDetail }) => {
             github: 'https://github.com/your-username/project3',
             youtube: null,
             itch: null,
-            responsibilities: ''
+            responsibilities: 'In this project i did:\n- guards movement\n- background animations\n- player animations'
         },
         bridgeAnim: {
             title: 'Brige animation',
@@ -42,21 +42,21 @@ const ProjectDetail = ({ projectId, closeProjectDetail }) => {
         },
         cubeSolver: {
             title: 'Rubik\'s cube solver',
-            description: 'A time tracking app for personal productivity.',
+            description: '3D representation of Rubik\'s cube is renderend without any external libraries. It uses matrix additions and multiplications to render the cube in perspective and enable rotating it. Additionaly, a solver, that return sequences of moves (written in official notation) to perform in order to solve the cube.',
             images: [],
             github: 'https://github.com/Mikosztyla/CubeSolver',
             youtube: null,
             itch: null,
-            responsibilities: ''
+            responsibilities: 'This project was developed only by me.'
         },
         gears: {
-            title: '"Trybiki"',
-            description: 'A time tracking app for personal productivity.',
+            title: '"Trycon"',
+            description: 'This 2D platformer vampire-survivor like game was developed during 24h GameJam. The theme of the event was "Trybiki". As a team of 3 developers and 2 graphic designer we craeted a game, where gears are the essential amunition and also your currency. You have to updrade your base (rotate it 180 degrees), before the enemies get you, in order to win.',
             images: [],
             github: null,
             youtube: null,
             itch: null,
-            responsibilities: ''
+            responsibilities: 'In this project i did:\n'
         },
         lemurs: {
             title: 'Lemuringo',
