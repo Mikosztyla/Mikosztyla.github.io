@@ -30,15 +30,22 @@ const Portfolio = ({ openProjectDetail }) => {
                         <h3 className="project-title">Czasoport</h3>
                         <p className="project-description">2D Future Fantasy Adventure and Puzzle game</p>
                     </div>
-                    <div className="project-card" onClick={() => openProjectDetail('project2')}>
+                    <div className="project-card" onClick={() => openProjectDetail('castle')}>
                         <h3 className="project-title">Castle</h3>
                         <p className="project-description">Mobile app for kids to encourage active sightseeing</p>
                     </div>
-                    <div className="project-card" onClick={() => openProjectDetail('project3')}>
+                    <div className="project-card" onClick={() => openProjectDetail('thiefGame')}>
                         <h3 className="project-title">Thief Game</h3>
                         <p className="project-description">Will you manage to steal MonaLisa?</p>
                     </div>
-                    {/* Add more project cards as needed */}
+                    <div className="project-card" onClick={() => openProjectDetail('bridgeAnim')}>
+                        <h3 className="project-title">Bridge animation</h3>
+                        <p className="project-description">Animation of walking bridge</p>
+                    </div>
+                    <div className="project-card" onClick={() => openProjectDetail('cubeSolver')}>
+                        <h3 className="project-title">Rubik's cube solver</h3>
+                        <p className="project-description">3D Rubik's cube simulation with solver (LBL method)</p>
+                    </div>
                 </div>
             </section>
 

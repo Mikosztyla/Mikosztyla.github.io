@@ -45,6 +45,16 @@
     margin-bottom: 20px;
 }
 
+.project-link {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.project-link:hover {
+    color: #007bff;
+}
+
 /* Title and description styling */
 .project-title {
     font-size: 2rem;

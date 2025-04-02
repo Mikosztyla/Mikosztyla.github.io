@@ -6,27 +6,43 @@ const ProjectDetail = ({ projectId, closeProjectDetail }) => {
     const projectData = {
         czasoport: {
             title: 'Czasoport',
+            description: 'This project is the result of my first big and finished group project in AGH Code Industry. Working with over 20 people, first as a developer then also as a Scrum Master I\'ve led this project to the finish. It\'s a 2D future, fantasy, adventure and puzzle game made with C# and Unity, where you have to save the humanity from distinction.\n\nImmerse yourself in this world and crack all the puzzles!',
+            images: ['/images/czasoport-1.jpg', '/images/czasoport-2.jpg'],
+            github: 'https://github.com/AGH-Code-Industry/czasoport',
+            youtube: null,
+            itch: null,
+        },
+        castle: {
+            title: 'Project \"Castle\"',
+            description: 'I\'m still working on this project, and ',
+            images: ['/images/project2-1.jpg'],
+            github: null,
+            youtube: null,
+            itch: null,
+        },
+        thiefGame: {
+            title: 'Project 3',
+            description: 'A description for project 3.',
+            images: ['/images/project3-1.jpg', '/images/project3-2.jpg'],
+            github: 'https://github.com/your-username/project3',
+            youtube: null,
+            itch: null,
+        },
+        bridgeAnim: {
+            title: 'Czasoport',
             description: 'A time tracking app for personal productivity.',
             images: ['/images/czasoport-1.jpg', '/images/czasoport-2.jpg'],
             github: 'https://github.com/your-username/czasoport',
             youtube: 'https://www.youtube.com/watch?v=yourvideoid',
             itch: 'https://yourgame.itch.io/czasoport',
         },
-        project2: {
-            title: 'Project 2',
-            description: 'A description for project 2.',
-            images: ['/images/project2-1.jpg'],
-            github: null, // No GitHub for this project
-            youtube: null, // No YouTube for this project
-            itch: 'https://yourgame.itch.io/project2',
-        },
-        project3: {
-            title: 'Project 3',
-            description: 'A description for project 3.',
-            images: ['/images/project3-1.jpg', '/images/project3-2.jpg'],
-            github: 'https://github.com/your-username/project3',
-            youtube: null, // No YouTube for this project
-            itch: null, // No itch.io for this project
+        cubeSolver: {
+            title: 'Czasoport',
+            description: 'A time tracking app for personal productivity.',
+            images: ['/images/czasoport-1.jpg', '/images/czasoport-2.jpg'],
+            github: 'https://github.com/your-username/czasoport',
+            youtube: 'https://www.youtube.com/watch?v=yourvideoid',
+            itch: 'https://yourgame.itch.io/czasoport',
         },
     };
 
