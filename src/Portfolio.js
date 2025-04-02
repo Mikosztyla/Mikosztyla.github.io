@@ -15,8 +15,8 @@ const Portfolio = ({ openProjectDetail }) => {
             </nav>
 
             <header className="hero-header">
-                Welcome to My Portfolio
-                <p className="hero-description">I create beautiful and functional web applications.</p>
+                Hello!
+                <p className="hero-description">I'm Mikołaj Gosztyła, a third-year Computer Science student at AGH University of Science and Technology. Explore my journey and discover the key milestones of my career and self-made projects.</p>
             </header>
 
             <section id="about" className="about-section">
