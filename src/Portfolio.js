@@ -19,10 +19,10 @@ const Portfolio = ({ openProjectDetail }) => {
                 <p className="hero-description">I'm Mikołaj Gosztyła, a third-year Computer Science student at AGH University of Science and Technology. Explore my journey and discover the key milestones of my career and self-made projects.</p>
             </header>
 
-            <section id="about" className="about-section">
+            {/* <section id="about" className="about-section">
                 <h2 className="section-title">About Me</h2>
                 <p className="about-description">Hello</p>
-            </section>
+            </section> */}
 
             <Roadmap />
 
