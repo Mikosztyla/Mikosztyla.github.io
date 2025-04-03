@@ -291,6 +291,17 @@ body::-webkit-scrollbar {
     text-align: left;
 }
 
+.project-footer {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.anim-link {
+    text-decoration: none;
+}
+
 @media (max-width: 800px) {
     .nav-links {
         flex-direction: column;

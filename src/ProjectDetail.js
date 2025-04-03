@@ -12,7 +12,7 @@ const ProjectDetail = ({ projectId, closeProjectDetail }) => {
             youtube: 'https://youtu.be/YTEHO9jmnjw',
             itch: 'https://bulba1265.itch.io/czasoport',
             responsibilities: 'In this project i did:\n- all the UI animations (time changing animation, item picking, etc)\n- player movement (with blend tree in Unity)\n- implementation of more then 50% of all the puzzles in the game',
-            showcase: null
+            showcase: 'https://youtu.be/3SmRGB80rX0'
         },
         castle: {
             title: 'Project "Castle"',
@@ -36,7 +36,7 @@ const ProjectDetail = ({ projectId, closeProjectDetail }) => {
         },
         bridgeAnim: {
             title: 'Brige animation',
-            description: 'As for the university project my friend and I created a key frame animation of the bridge in python for the 3D bridge model. We were working in the Maya software.',
+            description: 'As for the university project my friend and I created a key frame animation of the bridge in Python for the 3D bridge model. We were working in the Maya software.',
             images: [],
             github: null,
             youtube: 'https://youtu.be/rxFoa_v7JbY',
@@ -124,10 +124,13 @@ const ProjectDetail = ({ projectId, closeProjectDetail }) => {
                 <p className="project-description">{project.description}</p>
                 <p className="project-responsibilities">{project.responsibilities}</p>
                 {project.showcase && (
-                    <div className="youtube-link align-left">
-                        <a href={project.showcase} target="_blank" rel="noopener noreferrer" className="project-link">
-                            <FaYoutube size={30} />
-                        </a>
+                    <div className="project-footer">
+                        <div className="align-left">
+                            <a href={project.showcase} target="_blank" rel="noopener noreferrer" className="project-link">
+                                <FaYoutube size={30} />
+                            </a>
+                        </div>
+                        <a href={project.showcase} target="_blank" rel="noopener noreferrer" className="anim-link">Click here to see the animations</a>
                     </div>
                 )}
                 <div className="project-images">
