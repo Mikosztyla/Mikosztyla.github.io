@@ -105,7 +105,7 @@ const Portfolio = ({ openProjectDetail }) => {
                    className="project-link">
                 <FaGithub size={30}/>
                 </a>
-                <a href={"www.linkedin.com/in/mikosztyla"} target="_blank" rel="noopener noreferrer"
+                <a href={"https://www.linkedin.com/in/mikosztyla"} target="_blank" rel="noopener noreferrer"
                    className="project-link">
                     <FaLinkedin size={30}/>
                 </a>
