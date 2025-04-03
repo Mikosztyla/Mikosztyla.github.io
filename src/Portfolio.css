@@ -26,6 +26,7 @@ body::-webkit-scrollbar {
 
 .nav-bar {
     position: fixed;
+    flex-direction: row;
     width: 100%;
     background-color: #fff;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -302,9 +303,17 @@ body::-webkit-scrollbar {
     text-decoration: none;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 900px) {
     .nav-links {
-        flex-direction: column;
+        flex-direction: row;
+        justify-content: center;
+        width: 90%;
+        padding-right: 60px;
+        margin-right: 20px;
+    }
+
+    .nav-links li:last-child {
+        margin-right: 0px;
     }
 
     .hero-header {
@@ -316,6 +325,38 @@ body::-webkit-scrollbar {
         position: relative;
         width: 90%;
         margin: 0 auto;
+    }
+
+    .nav-title{
+        width: 90%;
+        text-align: center;
+    }
+    .nav-icons{
+        width: 90%;
+    }
+
+    .nav-bar {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 500px) {
+    .nav-links {
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        padding-right: 60px;
+        margin-right: 20px;
+    }
+
+    .hero-header {
+        padding-top: 290px;
+        padding-bottom: 30px;
+        height: 15vh;
+    }
+
+    .roadmap-container {
+        width: 100%;
     }
 }
 
