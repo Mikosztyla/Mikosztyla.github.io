@@ -16,13 +16,13 @@ const ProjectDetail = ({ projectId, closeProjectDetail }) => {
         },
         castle: {
             title: 'Project "Castle"',
-            description: 'I\'m still working on this project, and ',
+            description: 'I\'m still working on this project at AGH Code Industry. The app is designed for kids exploring Poland, where they scan QR codes to access unique games. Each game has its own legend, making learning faster and more engaging than expected.',
             images: [],
             github: null,
-            youtube: null,
+            youtube: 'https://youtu.be/HWJH1YilQKk',
             itch: null,
             responsibilities: 'In this project i did:\n- all the UI main screen animations\n- 3d procedural terrain generation',
-            showcase: null
+            showcase: 'https://youtu.be/z_teI7B7L-I'
         },
         thiefGame: {
             title: 'Thief Game',
@@ -30,7 +30,7 @@ const ProjectDetail = ({ projectId, closeProjectDetail }) => {
             images: [],
             github: null,
             youtube: 'https://youtu.be/bbnjuUQ-Wy4',
-            itch: null,
+            itch: 'https://bulba1265.itch.io/thief-game',
             responsibilities: 'In this project i did:\n- guards movement\n- player animations',
             showcase: 'https://youtu.be/81JqwqenrBw'
         },
