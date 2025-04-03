@@ -38,7 +38,6 @@ const Portfolio = ({ openProjectDetail }) => {
             </nav>
 
             <header className="hero-header">
-                Hello!
                 <p className="hero-description">I'm Mikołaj Gosztyła, a third-year Computer Science student at AGH
                     University of Science and Technology. Explore my journey and discover the key milestones of my
                     career and self-made projects.</p>

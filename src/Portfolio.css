@@ -1,3 +1,8 @@
+.project-image,
+.project-card {
+    will-change: transform, filter;
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -93,7 +98,7 @@ body::-webkit-scrollbar {
 .hero-header {
     margin-top: 16px;
     padding-top: 100px;
-    height: 20vh;
+    height: 10vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -293,6 +298,7 @@ body::-webkit-scrollbar {
 
     .hero-header {
         padding-top: 170px;
+        height: 15vh;
     }
 
     .roadmap-container {
