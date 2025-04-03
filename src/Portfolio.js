@@ -90,6 +90,11 @@ const Portfolio = ({ openProjectDetail }) => {
                         <h3 className="project-title">Rubik's cube solver</h3>
                         <p className="project-description">3D Rubik's cube simulation with solver (LBL method)</p>
                     </div>
+                    <div className="project-card" onClick={() => openProjectDetail('gitCourse')}>
+                        <img className="project-image" src={"/images/git.png"} alt={"Git Course"}/>
+                        <h3 className="project-title">Git Course</h3>
+                        <p className="project-description">Git course for beginners</p>
+                    </div>
                 </div>
             </section>
 
@@ -98,7 +103,7 @@ const Portfolio = ({ openProjectDetail }) => {
                 <p className="contact-description">Feel free to reach out via email or social media.</p>
                 <a href={"https://github.com/Mikosztyla"} target="_blank" rel="noopener noreferrer"
                    className="project-link">
-                    <FaGithub size={30}/>
+                <FaGithub size={30}/>
                 </a>
                 <a href={"www.linkedin.com/in/mikosztyla"} target="_blank" rel="noopener noreferrer"
                    className="project-link">

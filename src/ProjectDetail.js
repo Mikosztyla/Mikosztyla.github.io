@@ -74,6 +74,16 @@ const ProjectDetail = ({ projectId, closeProjectDetail }) => {
             responsibilities: 'In this project I did:\n- writing animation\n- boss attacks and animation\n- level selection\n- UI animations',
             showcase: null
         },
+        gitCourse: {
+            title: 'Git Course',
+            description: 'I created this course to help others understand Git in a more effective and accessible way. Git can be intimidating at first, but with the right guidance, it becomes an essential and powerful tool for every developer.',
+            images: [],
+            github: 'https://github.com/Mikosztyla/git-course',
+            youtube: null,
+            itch: null,
+            responsibilities: null,
+            showcase: null
+        },
     };
 
     const project = projectData[projectId];
