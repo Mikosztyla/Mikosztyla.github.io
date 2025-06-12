@@ -72,7 +72,7 @@ const Portfolio = ({ openProjectDetail }) => {
                         <p className="project-description">Simulation of Fighting for Survival</p>
                     </div>
                     <div className="project-card" onClick={() => openProjectDetail('neuralDungeon')}>
-                        <img className="project-image" src={"/images/neuralDungeon.png"}
+                        <img className="project-image" src={"/images/NeuralDungeon.png"}
                              alt={"Neural Dungeon"}/>
                         <h3 className="project-title">Neural Dungeon</h3>
                         <p className="project-description">3D Game with Procedurally Generated Levels and Adaptive AI
