@@ -84,6 +84,66 @@ const ProjectDetail = ({ projectId, closeProjectDetail }) => {
             responsibilities: null,
             showcase: null
         },
+        learningPlatformDB: {
+            title: 'Learning Platform Database System',
+            description: 'This project is a simple database system for a company offering learning courses, webinars, and studies. It allows managing courses, students, teachers, webinars, studies, and more. Designed as a foundational solution, it can serve as a base for more complex educational systems.',
+            images: [],
+            github: 'https://github.com/Mikosztyla/Learning-Platform-Database-System',
+            youtube: null,
+            itch: null,
+            responsibilities: 'In this project I:\n- co-designed the database schema\n- implemented SQL procedures, triggers, views, and functions\n- collaborated closely with a team of three to complete a fully working backend structure for an education-focused platform',
+            showcase: null
+        },
+        darwinWorld: {
+            title: 'Darwin World: Simulation of Fighting for Survival',
+            description: 'Final project for the Object-Oriented Programming course at AGH University of Krakow. This graphical JavaFX application simulates a simplified version of natural selection, where animals randomly traverse the map, eat grass to gain energy, reproduce, and eventually die if they run out of energy. The simulation includes customizable parameters, configuration saving, and CSV export for daily statistics like population and average energy.',
+            images: [],
+            github: 'https://github.com/Mikosztyla/Darwin-world',
+            youtube: null,
+            itch: null,
+            responsibilities: 'In this project I:\n- co-implemented core simulation logic, including animal movement, energy system, and reproduction mechanics\n- developed configuration and statistics export features (CSV)\n- co-designed the GUI and simulation controls using JavaFX',
+            showcase: null
+        },
+        neuralDungeon: {
+            title: '3D Game with Procedurally Generated Levels and Adaptive AI',
+            description: 'IN PROGRESS\nThis Bachelor’s thesis project aims to develop a 3D game featuring procedurally generated levels composed of corridors and rooms. The goal is to design algorithms that generate unique, playable maps to ensure high replayability. The game will include AI-controlled enemies capable of adapting dynamically to player behavior for enhanced immersion and challenge. The project will be built in Unity using advanced techniques such as inverse kinematics, Marching Cubes, and the Bowyer-Watson algorithm.',
+            images: [],
+            github: null,
+            youtube: 'https://youtu.be/DrzbOKQONlU',
+            itch: null,
+            responsibilities: 'In this project I:\n- co-implemented procedural map generation using Bowyer-Watson and Marching Cubes algorithms\n- developed procedural animation systems using inverse kinematics',
+            showcase: null
+        },
+        cinemaProject: {
+            title: 'Cinema Project',
+            description: 'Window-based cinema management application built in Java using JavaFX, Spring, and REST APIs. This project enables both users and administrators to interact with a cinema system through a clean UI. Users will be able to browse movies, reserve seats, and provide feedback, while admins will manage screenings, analyze statistics, and oversee system-wide content. Key features include authentication, role-based access, and user notifications.',
+            images: [],
+            github: 'https://github.com/pajka2T/Cinema-app',
+            youtube: null,
+            itch: null,
+            responsibilities: 'In this project I:\n- co-implemented seat reservation and user rating features\n- developed parts of the REST backend in Spring\n- handled authentication logic and error checking for invalid actions\n- contributed to the JavaFX UI and role-based view differentiation',
+            showcase: null
+        },
+        chessSimulator: {
+            title: 'Chess Simulator',
+            description: 'A Java-based simulator of chess pieces, featuring a simple graphical representation of the chessboard and implementation of all standard chess rules. Developed as a solo project with a strong emphasis on clean code principles and maintainability. The application provides full movement logic and validation for all piece types, ensuring rule-compliant gameplay.',
+            images: [],
+            github: 'https://github.com/Mikosztyla/ChessSimulator',
+            youtube: null,
+            itch: null,
+            responsibilities: 'This project was developed entirely by myself.\n- implemented full chess logic and rule validation\n- focused on clean code practices and maintainable structure',
+            showcase: null
+        },
+        aghPinpals: {
+            title: 'AGH PinPals',
+            description: 'Mobile application designed for AGH students to help them connect and locate friends across the university campus and student housing area. Users can pin their current location, tag the purpose of their meetup, and discover events and promotions around the AGH Campus. The app supports public and private pins, tag-based filtering, and live event maps. Built with Flutter on the frontend and Spring Boot + MySQL on the backend.',
+            images: [],
+            github: 'https://github.com/AGH-Friend-FInder/agh_pin_palls',
+            youtube: null,
+            itch: null,
+            responsibilities: 'In this project I:\n- developed the backend in Spring Boot\n- designed and implemented RESTful APIs for pin creation, filtering, and event management\n- integrated MySQL for data persistence\n- ensured proper user role separation and data visibility for public/private pins',
+            showcase: null
+        }
     };
 
     const project = projectData[projectId];
