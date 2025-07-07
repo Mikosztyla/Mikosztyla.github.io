@@ -143,6 +143,18 @@ const ProjectDetail = ({ projectId, closeProjectDetail }) => {
             itch: null,
             responsibilities: 'In this project I:\n- developed the backend in Spring Boot\n- designed and implemented RESTful APIs for pin creation, filtering, and event management\n- integrated MySQL for data persistence\n- ensured proper user role separation and data visibility for public/private pins',
             showcase: null
+        },
+        vampotanica: {
+            title: 'Vampotanica',
+            description: 'Embrace your inner gothic lolita vampire in Vampotanica, a unique blend of Vampire Survivors chaos and strategic Tower Defense!\n' +
+                '\n' +
+                'As a powerful loli vampire, your serene forest lair, nestled amongst forgotten clearings, ancient graves, and crumbling shrines, is under siege. Hordes of relentless, axe-wielding monks, determined to eradicate your kind, are closing in under the cloak of night. But fear not, for you possess a dark, floral power unlike any other.',
+            images: [],
+            github: 'https://github.com/AGH-Code-Industry/BialJam2025',
+            youtube: 'https://www.youtube.com/watch?v=5Vp39i5YCK8',
+            itch: 'https://pitahaya-games.itch.io/vampotanica',
+            responsibilities: 'In this project I:\n- Implemented player animations, core gameplay systems, and performance optimizations\n- Fixed bugs and improved overall game stability during intense horde encounters\n',
+            showcase: null
         }
     };
 
