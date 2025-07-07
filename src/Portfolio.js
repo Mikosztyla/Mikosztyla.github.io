@@ -103,8 +103,8 @@ const Portfolio = ({ openProjectDetail }) => {
                 <h2 className="section-title">My Games</h2>
                 <div className="projects-grid">
                     <div className="project-card" onClick={() => openProjectDetail('vampotanica')}>
-                        <img className="project-image" src={"/images/Vampotanic.png"} alt={"vampotanica"}/>
-                        <h3 className="project-title">Vampotanica</h3>
+                        <img className="project-image" src={"/images/Vampotanic.png"} alt={"vampotanic"}/>
+                        <h3 className="project-title">Vampotanic</h3>
                         <p className="project-description">Vampire Survivors chaos and strategic Tower Defense</p>
                     </div>
                     <div className="project-card" onClick={() => openProjectDetail('czasoport')}>

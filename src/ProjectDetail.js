@@ -146,7 +146,7 @@ const ProjectDetail = ({ projectId, closeProjectDetail }) => {
         },
         vampotanica: {
             title: 'Vampotanica',
-            description: 'Embrace your inner gothic lolita vampire in Vampotanica, a unique blend of Vampire Survivors chaos and strategic Tower Defense!\n' +
+            description: 'Embrace your inner gothic lolita vampire in Vampotanic, a unique blend of Vampire Survivors chaos and strategic Tower Defense!\n' +
                 '\n' +
                 'As a powerful loli vampire, your serene forest lair, nestled amongst forgotten clearings, ancient graves, and crumbling shrines, is under siege. Hordes of relentless, axe-wielding monks, determined to eradicate your kind, are closing in under the cloak of night. But fear not, for you possess a dark, floral power unlike any other.',
             images: [],
