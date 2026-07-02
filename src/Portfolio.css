@@ -52,7 +52,8 @@
     color: var(--text);
     text-decoration: none;
     letter-spacing: -0.02em;
-    white-space: nowrap;
+    flex-shrink: 0;
+    line-height: 1.2;
 }
 
 .nav-links {
@@ -628,7 +629,16 @@
 /* ── Responsive ── */
 @media (max-width: 900px) {
     .nav-bar {
-        padding: 0 1rem;
+        padding: 0.5rem 1rem;
+        height: auto;
+        min-height: var(--nav-height);
+        align-items: center;
+        gap: 0.75rem;
+    }
+
+    .nav-brand {
+        font-size: 0.95rem;
+        max-width: calc(100% - 7rem);
     }
 
     .nav-links {
