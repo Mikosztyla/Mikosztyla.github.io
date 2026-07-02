@@ -1,62 +1,38 @@
-import React from "react";
-import "./Portfolio.css";
+import React from 'react';
+import { profile } from './data/profile';
+import './Portfolio.css';
 
 const Roadmap = () => {
-    const jobs = [
-        {
-            title: "Software Engineer I",
-            company: "Sabre",
-            date: "2024.10 - Present",
-        },
-        {
-            title: "Intern",
-            company: "Sabre",
-            date: "2024.07 - 2024.09",
-        },
-        {
-            title: "Board Member",
-            company: "AGH Code Industry",
-            date: "2024.05 - Present",
-        },
-        {
-            title: "Game Developer",
-            company: "AGH Code Industry",
-            date: "2023.04 - Present",
-        },
-        {
-            title: "Unity Developer",
-            company: "Geotronics Dystrybucja Sp. z o.o.",
-            date: "2023.10 - 2024.01",
-        },
-        {
-            title: "Information Technology Tutor",
-            company: "Kodland",
-            date: "2023.05 - 2023.09",
-        },
-        {
-            title: "Camp Counselor and Lifeguard",
-            company: "YMCA NorthWoods Camp",
-            date: "2022.05 - 2022.08",
-        },
-    ];
+    const { experience } = profile;
 
     return (
-        <section id="roadmap" className="roadmap-section">
-            <h2 className="section-title">Career Roadmap</h2>
-            <div className="roadmap-container">
-                <div className="roadmap-line"></div>
-                {jobs.map((job, index) => (
-                    <div
-                        key={index}
-                        className={`roadmap-item ${index % 2 === 0 ? "left" : "right"}`}
+        <section id="experience" className="roadmap-section">
+            <div className="fade-in-section">
+                <h2 className="section-title">Experience</h2>
+                <p className="section-subtitle">Professional journey - backend, microservices &amp; production systems</p>
+            </div>
+            <div className="experience-list">
+                {experience.map((job) => (
+                    <article
+                        key={`${job.company}-${job.title}`}
+                        className="experience-card fade-in-section"
                     >
-                        <div className="roadmap-dot"></div>
-                        <div className="roadmap-content">
-                            <h3 className="job-title">{job.title}</h3>
-                            <p className="job-company">{job.company}</p>
-                            <p className="job-date">{job.date}</p>
+                        <div className="experience-header">
+                            <div>
+                                <h3 className="job-title">{job.title}</h3>
+                                <p className="job-company">{job.company}</p>
+                            </div>
+                            <div className="experience-meta">
+                                <span className="job-date">{job.date}</span>
+                                <span className="job-location">{job.location}</span>
+                            </div>
                         </div>
-                    </div>
+                        <ul className="job-highlights">
+                            {job.highlights.map((highlight) => (
+                                <li key={highlight}>{highlight}</li>
+                            ))}
+                        </ul>
+                    </article>
                 ))}
             </div>
         </section>

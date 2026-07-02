@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
-import { FaGithub, FaYoutube, FaItchIo } from 'react-icons/fa';
+import { FaGithub, FaYoutube, FaItchIo, FaGooglePlay, FaApple, FaFilePdf } from 'react-icons/fa';
 import './ProjectDetail.css';
-
 const ProjectDetail = ({ projectId, closeProjectDetail }) => {
     const projectData = {
         czasoport: {
@@ -15,13 +14,15 @@ const ProjectDetail = ({ projectId, closeProjectDetail }) => {
             showcase: 'https://youtu.be/3SmRGB80rX0'
         },
         castle: {
-            title: 'Project "Castle"',
-            description: 'I\'m still working on this project at AGH Code Industry. The app is designed for kids exploring Poland, where they scan QR codes to access unique games. Each game has its own legend, making learning faster and more engaging than expected.',
+            title: 'Zwiedzaj i Graj',
+            description: 'Explore and Play is a mobile app that lets you discover the Karkonosze Mountains through an interactive field game. Scan QR codes at selected locations to unlock themed mini-games and local legends that bring regional history and folklore to life.\n\nThe app encourages active exploration, off-the-beaten-path routes, and learning through play. Progress and achievements can unlock real-world rewards at partner locations.\n\nReleased on Google Play and the App Store in collaboration with AGH Code Industry.',
             images: [],
             github: null,
             youtube: 'https://youtu.be/HWJH1YilQKk',
             itch: null,
-            responsibilities: 'In this project i did:\n- all the UI main screen animations\n- 3d procedural terrain generation',
+            googlePlay: 'https://play.google.com/store/apps/details?id=com.AGHCodeIndustry.zamek',
+            appStore: 'https://apps.apple.com/pl/app/zwiedzaj-i-graj/id6760973608',
+            responsibilities: 'In this project I:\n- built all main screen UI animations\n- implemented 3D procedural terrain generation\n- contributed to a production release on Google Play and the App Store',
             showcase: 'https://youtu.be/z_teI7B7L-I'
         },
         thiefGame: {
@@ -105,13 +106,24 @@ const ProjectDetail = ({ projectId, closeProjectDetail }) => {
             showcase: null
         },
         neuralDungeon: {
-            title: '3D Game with Procedurally Generated Levels and Adaptive AI',
-            description: 'IN PROGRESS\nThis Bachelor’s thesis project aims to develop a 3D game featuring procedurally generated levels composed of corridors and rooms. The goal is to design algorithms that generate unique, playable maps to ensure high replayability. The game will include AI-controlled enemies capable of adapting dynamically to player behavior for enhanced immersion and challenge. The project will be built in Unity using advanced techniques such as inverse kinematics, Marching Cubes, and the Bowyer-Watson algorithm.',
+            title: 'Neural Dungeon',
+            description: 'Bachelor\'s thesis project (AGH, 2026) - a 3D Unity game with procedurally generated dungeon levels and AI opponents that adapt to player behavior.\n\nThe team implemented procedural map generation using Bowyer-Watson triangulation and Marching Cubes meshing, inverse kinematics for creature animation, and a machine-learning-driven difficulty system. The project was completed and released on GitHub.',
             images: [],
-            github: null,
+            github: 'https://github.com/Embodied-Neurons/neural-dungeon',
             youtube: 'https://youtu.be/DrzbOKQONlU',
             itch: null,
-            responsibilities: 'In this project I:\n- co-implemented procedural map generation using Bowyer-Watson and Marching Cubes algorithms\n- developed procedural animation systems using inverse kinematics',
+            thesis: 'https://drive.google.com/file/d/1p8-O6rpuYE4T7nauQN1UoE8aqEXnAbkU/view?usp=sharing',
+            responsibilities: 'In this project I:\n- co-implemented procedural map generation using Bowyer-Watson and Marching Cubes algorithms\n- developed procedural animation systems using inverse kinematics\n- contributed to adaptive enemy difficulty based on an ML model',
+            showcase: null
+        },
+        stockMarket: {
+            title: 'Stock Market - Simplified Trading API',
+            description: 'A high-availability stock trading simulation built with Java 21 and Spring Boot. Three application instances run behind an Nginx load balancer, sharing a PostgreSQL database with pessimistic locking to guarantee data integrity under concurrent buy/sell load.\n\nThe system includes rate limiting, a chaos endpoint to kill instances and verify failover, full observability (Prometheus, Grafana, Loki, Jaeger with OpenTelemetry tracing), and a CI pipeline with unit, functional, E2E, OWASP, SonarCloud, and k6 performance tests.',
+            images: [],
+            github: 'https://github.com/Mikosztyla/stock-market',
+            youtube: null,
+            itch: null,
+            responsibilities: 'Solo project. I designed and built:\n- REST API for bank inventory, wallet buy/sell, and audit log\n- 3-instance load-balanced setup with Nginx health checks and Docker Compose\n- pessimistic locking + optimistic versioning for concurrent trade safety\n- observability stack: metrics, structured logs, distributed tracing\n- CI/CD with GitHub Actions and k6 load tests',
             showcase: null
         },
         cinemaProject: {
@@ -177,18 +189,33 @@ const ProjectDetail = ({ projectId, closeProjectDetail }) => {
                 <button onClick={closeProjectDetail} className="close-button">X</button>
                 <div className="project-links">
                     {project.github && (
-                        <a href={project.github} target="_blank" rel="noopener noreferrer" className="project-link">
+                        <a href={project.github} target="_blank" rel="noopener noreferrer" className="project-link" title="GitHub">
                             <FaGithub size={30} />
                         </a>
                     )}
                     {project.youtube && (
-                        <a href={project.youtube} target="_blank" rel="noopener noreferrer" className="project-link">
+                        <a href={project.youtube} target="_blank" rel="noopener noreferrer" className="project-link" title="YouTube">
                             <FaYoutube size={30} />
                         </a>
                     )}
                     {project.itch && (
-                        <a href={project.itch} target="_blank" rel="noopener noreferrer" className="project-link">
+                        <a href={project.itch} target="_blank" rel="noopener noreferrer" className="project-link" title="itch.io">
                             <FaItchIo size={30} />
+                        </a>
+                    )}
+                    {project.googlePlay && (
+                        <a href={project.googlePlay} target="_blank" rel="noopener noreferrer" className="project-link" title="Google Play">
+                            <FaGooglePlay size={30} />
+                        </a>
+                    )}
+                    {project.appStore && (
+                        <a href={project.appStore} target="_blank" rel="noopener noreferrer" className="project-link" title="App Store">
+                            <FaApple size={30} />
+                        </a>
+                    )}
+                    {project.thesis && (
+                        <a href={project.thesis} target="_blank" rel="noopener noreferrer" className="project-link" title="Bachelor's thesis (PDF)">
+                            <FaFilePdf size={30} />
                         </a>
                     )}
                 </div>
