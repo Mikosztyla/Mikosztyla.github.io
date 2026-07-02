@@ -1,7 +1,17 @@
-import React, { useEffect } from 'react';
-import { FaGithub, FaYoutube, FaItchIo, FaGooglePlay, FaApple, FaFilePdf } from 'react-icons/fa';
+import React, { useEffect, useState, useCallback } from 'react';
+import { FaGithub, FaYoutube, FaItchIo, FaGooglePlay, FaApple, FaFilePdf, FaTimes } from 'react-icons/fa';
 import './ProjectDetail.css';
+
+const CLOSE_ANIMATION_MS = 240;
+
 const ProjectDetail = ({ projectId, closeProjectDetail }) => {
+    const [isClosing, setIsClosing] = useState(false);
+
+    const handleClose = useCallback(() => {
+        if (isClosing) return;
+        setIsClosing(true);
+    }, [isClosing]);
+
     const projectData = {
         czasoport: {
             title: 'Czasoport',
@@ -158,9 +168,7 @@ const ProjectDetail = ({ projectId, closeProjectDetail }) => {
         },
         vampotanica: {
             title: 'Vampotanica',
-            description: 'Embrace your inner gothic lolita vampire in Vampotanic, a unique blend of Vampire Survivors chaos and strategic Tower Defense!\n' +
-                '\n' +
-                'As a powerful loli vampire, your serene forest lair, nestled amongst forgotten clearings, ancient graves, and crumbling shrines, is under siege. Hordes of relentless, axe-wielding monks, determined to eradicate your kind, are closing in under the cloak of night. But fear not, for you possess a dark, floral power unlike any other.',
+            description: 'Embrace your inner gothic lolita vampire in Vampotanic, a unique blend of Vampire Survivors chaos and strategic Tower Defense!\n\nAs a powerful loli vampire, your serene forest lair, nestled amongst forgotten clearings, ancient graves, and crumbling shrines, is under siege. Hordes of relentless, axe-wielding monks, determined to eradicate your kind, are closing in under the cloak of night. But fear not, for you possess a dark, floral power unlike any other.',
             images: [],
             github: 'https://github.com/AGH-Code-Industry/BialJam2025',
             youtube: 'https://www.youtube.com/watch?v=5Vp39i5YCK8',
@@ -173,60 +181,106 @@ const ProjectDetail = ({ projectId, closeProjectDetail }) => {
     const project = projectData[projectId];
 
     useEffect(() => {
-        document.body.style.overflow = "hidden";
+        document.body.style.overflow = 'hidden';
         return () => {
-            document.body.style.overflow = "auto";
+            document.body.style.overflow = 'auto';
         };
     }, []);
+
+    useEffect(() => {
+        if (!isClosing) return undefined;
+
+        const timer = setTimeout(() => {
+            closeProjectDetail();
+        }, CLOSE_ANIMATION_MS);
+
+        return () => clearTimeout(timer);
+    }, [isClosing, closeProjectDetail]);
+
+    useEffect(() => {
+        const onKeyDown = (event) => {
+            if (event.key === 'Escape') {
+                handleClose();
+            }
+        };
+
+        window.addEventListener('keydown', onKeyDown);
+        return () => window.removeEventListener('keydown', onKeyDown);
+    }, [handleClose]);
 
     if (!project) {
         return <div>Project not found!</div>;
     }
 
+    const overlayClass = `modal-overlay ${isClosing ? 'modal-closing' : 'modal-open'}`;
+
     return (
-        <div className="modal-overlay">
-            <div className="modal-container">
-                <button onClick={closeProjectDetail} className="close-button">X</button>
+        <div
+            className={overlayClass}
+            onClick={handleClose}
+            role="presentation"
+        >
+            <div
+                className="modal-container"
+                onClick={(event) => event.stopPropagation()}
+                role="dialog"
+                aria-modal="true"
+                aria-labelledby="modal-project-title"
+            >
+                <div className="modal-header">
+                    <h2 id="modal-project-title" className="project-title">{project.title}</h2>
+                    <button
+                        type="button"
+                        onClick={handleClose}
+                        className="close-button"
+                        aria-label="Close project details"
+                    >
+                        <FaTimes size={16} />
+                    </button>
+                </div>
+
                 <div className="project-links">
                     {project.github && (
                         <a href={project.github} target="_blank" rel="noopener noreferrer" className="project-link" title="GitHub">
-                            <FaGithub size={30} />
+                            <FaGithub size={28} />
                         </a>
                     )}
                     {project.youtube && (
                         <a href={project.youtube} target="_blank" rel="noopener noreferrer" className="project-link" title="YouTube">
-                            <FaYoutube size={30} />
+                            <FaYoutube size={28} />
                         </a>
                     )}
                     {project.itch && (
                         <a href={project.itch} target="_blank" rel="noopener noreferrer" className="project-link" title="itch.io">
-                            <FaItchIo size={30} />
+                            <FaItchIo size={28} />
                         </a>
                     )}
                     {project.googlePlay && (
                         <a href={project.googlePlay} target="_blank" rel="noopener noreferrer" className="project-link" title="Google Play">
-                            <FaGooglePlay size={30} />
+                            <FaGooglePlay size={28} />
                         </a>
                     )}
                     {project.appStore && (
                         <a href={project.appStore} target="_blank" rel="noopener noreferrer" className="project-link" title="App Store">
-                            <FaApple size={30} />
+                            <FaApple size={28} />
                         </a>
                     )}
                     {project.thesis && (
                         <a href={project.thesis} target="_blank" rel="noopener noreferrer" className="project-link" title="Bachelor's thesis (PDF)">
-                            <FaFilePdf size={30} />
+                            <FaFilePdf size={28} />
                         </a>
                     )}
                 </div>
-                <h2 className="project-title">{project.title}</h2>
+
                 <p className="project-description">{project.description}</p>
-                <p className="project-responsibilities">{project.responsibilities}</p>
+                {project.responsibilities && (
+                    <p className="project-responsibilities">{project.responsibilities}</p>
+                )}
                 {project.showcase && (
                     <div className="project-footer">
                         <div className="align-left">
                             <a href={project.showcase} target="_blank" rel="noopener noreferrer" className="project-link">
-                                <FaYoutube size={30} />
+                                <FaYoutube size={28} />
                             </a>
                         </div>
                         <a href={project.showcase} target="_blank" rel="noopener noreferrer" className="anim-link">Click here to see the animations</a>

@@ -1,8 +1,48 @@
+@keyframes modalOverlayIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes modalOverlayOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes modalPanelIn {
+    from {
+        opacity: 0;
+        transform: translateY(28px) scale(0.96);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes modalPanelOut {
+    from {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(20px) scale(0.97);
+    }
+}
+
 .modal-overlay {
     position: fixed;
     inset: 0;
-    background: rgba(0, 0, 0, 0.8);
-    backdrop-filter: blur(4px);
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(6px);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -10,60 +50,103 @@
     padding: 1rem;
 }
 
+.modal-overlay.modal-open {
+    animation: modalOverlayIn 0.28s ease-out forwards;
+}
+
+.modal-overlay.modal-open .modal-container {
+    animation: modalPanelIn 0.32s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.modal-overlay.modal-closing {
+    animation: modalOverlayOut 0.24s ease-in forwards;
+    pointer-events: none;
+}
+
+.modal-overlay.modal-closing .modal-container {
+    animation: modalPanelOut 0.24s ease-in forwards;
+}
+
 .modal-container {
     position: relative;
     background: #1e2a3a;
     color: #e8edf4;
-    padding: 2rem;
-    border-radius: 12px;
+    padding: 1.5rem 1.75rem 1.75rem;
+    border-radius: 14px;
     width: 100%;
     max-width: 720px;
     border: 1px solid rgba(255, 255, 255, 0.08);
-    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.55);
     overflow-y: auto;
     max-height: 90vh;
 }
 
+.modal-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
 .close-button {
-    position: absolute;
-    top: 12px;
-    right: 16px;
-    background: transparent;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     color: #8b9cb3;
-    border: none;
-    font-size: 1.5rem;
     cursor: pointer;
-    transition: color 0.2s;
-    line-height: 1;
+    transition: background 0.2s, border-color 0.2s, color 0.2s, transform 0.2s;
+    padding: 0;
 }
 
 .close-button:hover {
+    background: rgba(45, 212, 191, 0.12);
+    border-color: rgba(45, 212, 191, 0.35);
     color: #2dd4bf;
+    transform: rotate(90deg);
+}
+
+.close-button:focus-visible {
+    outline: 2px solid #2dd4bf;
+    outline-offset: 2px;
 }
 
 .project-links {
     display: flex;
-    justify-content: center;
-    gap: 1.25rem;
-    margin-bottom: 1.5rem;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1.25rem;
 }
 
 .project-link {
     color: #8b9cb3;
     text-decoration: none;
     transition: color 0.2s, transform 0.2s;
+    display: flex;
+    align-items: center;
 }
 
 .project-link:hover {
     color: #2dd4bf;
-    transform: scale(1.1);
+    transform: translateY(-2px);
 }
 
 .modal-container .project-title {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
     font-weight: 700;
-    margin-bottom: 1rem;
+    margin: 0;
     color: #e8edf4;
+    line-height: 1.3;
+    padding-right: 0.5rem;
 }
 
 .modal-container .project-description {
@@ -125,13 +208,30 @@
     filter: none;
 }
 
+@media (prefers-reduced-motion: reduce) {
+    .modal-overlay.modal-open,
+    .modal-overlay.modal-open .modal-container,
+    .modal-overlay.modal-closing,
+    .modal-overlay.modal-closing .modal-container {
+        animation: none;
+    }
+
+    .close-button:hover {
+        transform: none;
+    }
+}
+
 @media (max-width: 600px) {
     .modal-container {
-        padding: 1.5rem;
+        padding: 1.25rem;
     }
 
     .modal-container .project-title {
-        font-size: 1.35rem;
-        padding-right: 2rem;
+        font-size: 1.2rem;
+    }
+
+    .close-button {
+        width: 32px;
+        height: 32px;
     }
 }
