@@ -17,9 +17,9 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "cross-env NODE_OPTIONS=--openssl-legacy-provider react-scripts start",
-    "build": "cross-env NODE_OPTIONS=--openssl-legacy-provider react-scripts build",
-    "test": "cross-env NODE_OPTIONS=--openssl-legacy-provider react-scripts test",
+    "start": "node --openssl-legacy-provider node_modules/react-scripts/scripts/start.js",
+    "build": "node --openssl-legacy-provider node_modules/react-scripts/scripts/build.js",
+    "test": "node --openssl-legacy-provider node_modules/react-scripts/scripts/test.js",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"

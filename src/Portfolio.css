@@ -47,15 +47,12 @@
 }
 
 .nav-brand {
-    font-size: 1.25rem;
+    font-size: 1.05rem;
     font-weight: 700;
     color: var(--text);
     text-decoration: none;
     letter-spacing: -0.02em;
-}
-
-.nav-brand-accent {
-    color: var(--accent);
+    white-space: nowrap;
 }
 
 .nav-links {

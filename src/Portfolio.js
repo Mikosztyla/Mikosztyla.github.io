@@ -10,7 +10,7 @@ const Portfolio = ({ openProjectDetail }) => {
     return (
         <div className="portfolio-container" id="top">
             <nav className="nav-bar">
-                <a href="#top" className="nav-brand">{name.split(' ')[0]}<span className="nav-brand-accent">.</span></a>
+                <a href="#top" className="nav-brand">{name}</a>
                 <ul className="nav-links">
                     <li><a href="#about" className="nav-link">About</a></li>
                     <li><a href="#experience" className="nav-link">Experience</a></li>
